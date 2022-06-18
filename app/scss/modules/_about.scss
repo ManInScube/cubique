@@ -1,0 +1,27 @@
+$font-face: Georgia, 'Times New Roman', Times, serif;
+
+.about{
+    padding-top: 50px;
+    min-width: 320px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__photo{
+        width: 49%;
+    }
+
+    &__desc{
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            font-family: $font-face;
+            color: black;
+            font-size: 13px;
+        }
+    }
+}
