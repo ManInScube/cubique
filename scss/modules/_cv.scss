@@ -1,0 +1,51 @@
+$font-face: Georgia, 'Times New Roman', Times, serif;
+
+.cv{
+    padding-top: 50px;
+    min-width: 320px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgba(83, 84, 84, 1);
+
+    h3{
+        font-family: $font-face;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    &__experience{
+        width: 29%;
+    }
+
+    &__duties{
+        width: 29%;
+    }
+
+    &__awards{
+        width: 29%;
+    }
+
+    &__item{
+        margin-top: 30px;
+        &__head{
+            font-size: 13px;
+            line-height: 10px;
+
+            p{
+                color: rgba(83, 84, 84, 1);
+            }
+            span{
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+
+        &__desc{
+            font-size: 11px;
+            line-height: 2px;
+        }
+        
+    }
+
+}
