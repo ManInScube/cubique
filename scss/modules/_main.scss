@@ -350,6 +350,22 @@ h2{
 
     }
 
+    &__plans{
+        @extend %flex-row;
+        flex-wrap: wrap;
+        margin: 50px;
+       
+
+        &-item{
+            max-width: 40%;
+
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
     p{
         font-size: 1em;
         font-weight: 300;
