@@ -31,12 +31,14 @@ $font-family: 'Rubik';
 
     header{
         width: 100%;
+
+
     }
     .logo{
         width: 20%;
     }
     nav{
-        width: 80%;
+        width: 30%;
         //min-width: 400px;
     }
     
@@ -68,7 +70,7 @@ $font-family: 'Rubik';
     
 }
 
-header{
+.header{
     @extend %flex-row;
     padding: 0 80px;
     .logo{
@@ -93,6 +95,23 @@ header{
             }
         }
     }
+
+
+    &__social{
+        @extend %flex-row;
+        align-items: center;
+
+        width: 20%;
+
+        a{
+            width: 30px;
+            display: block;
+   
+        }
+        
+    }
+
+
 }
 
 nav{
@@ -109,7 +128,6 @@ nav{
     }
 
 
-
   
 }
 
@@ -117,8 +135,12 @@ nav{
     width: 90%;
    
     margin: 0 auto;
-    position: relative;
-    margin-top: 10px;
+    padding: 0 30px;
+    //position: relative;
+    margin-top: 100px;
+    @extend %flex-row;
+    
+    /*
     img{
         width: 100%;
         height: 500px;
@@ -134,6 +156,37 @@ nav{
         width: 100%;
         height: 100%;
         z-index: 2;
+    }
+    */
+
+    &__logo{
+        width: 30%;
+        position: relative;
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__about{
+        width: 65%;
+        @extend %flex-row;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        div{
+            span{
+                font-weight: 400;
+                color: black;
+            }
+            p{
+                color: rgba(0,0,0,.8) !important;
+                font-size: 0.8em;
+                width: 80%;
+                font-weight: 300;
+            }
+        }
+
     }
 
 
@@ -157,6 +210,66 @@ nav{
         display: block;
     }
 }
+
+.examples{
+    @extend %flex-column; 
+    padding: 0 30px;
+  
+    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    &__images{
+        @extend %flex-row; 
+        width: 100%;
+
+        &-left{
+            padding-bottom: 30px;
+            border-bottom: 3px solid rgba(0,0,0, .15);
+            width: 30%;
+            img{
+                width: 100%;
+            }
+        }
+
+        &-right{
+            width: 65%;
+            padding-bottom: 30px;
+            border-bottom: 3px solid rgba(0,0,0, .15);
+            .swiper{
+                width: 100%;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__info{
+        @extend %flex-row;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 30px;
+
+        span{
+            color: black;
+            //font-size: .9em;
+        }
+
+        p{
+            color: rgba(0,0,0,.6);
+            //font-size: .9em;
+
+        }
+    }
+
+    &__prop{
+        margin-right: 30px;
+    }
+}
+
 
 .sections{
     @extend %flex-row;
