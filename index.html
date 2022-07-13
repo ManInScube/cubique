@@ -27,8 +27,9 @@
 		<nav>
 			<a class="navLink" onmouseover="navHover()" href="villas.html">RESIDENTIAL</a>
 			<a class="navLink" onmouseover="navHover()" href="commercial.html">COMMERCIAL</a>
-			<a class="navLink" href="">COMMUNITY</a>
 			<a class="navLink" href="">LANDSCAPE</a>
+			<a class="navLink" href="">WELLNESS</a>
+			<a class="navLink" href="">COMMUNITY</a>
 
 		</nav>
 
@@ -59,59 +60,103 @@
 		</div>
 
 
-		<div class="examples" id="app">
-			<div class="examples__images">
-				<div class="examples__images-left">
-					<img v-bind:src="currProject.leftPhoto" alt="">
+		<div class="latest">
+			<h2>Latest work</h2>
+			<div class="latest__container">
+	
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
 				</div>
 	
-				<div class="examples__images-right">
-					
-					<div class="swiper">
-						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper">
-						  <!-- Slides -->
-						  <div class="swiper-slide">
-							<img src="static/images/ss_villa.jpeg" alt="">
-						  </div>
-						  <div class="swiper-slide">
-							<img src="static/images/ss_villa_1.jpeg" alt="">
-						  </div>
-						  <div class="swiper-slide">
-							<img src="static/images/ss_villa.jpeg" alt="">
-						  </div>
-						</div>
-						<!-- If we need pagination -->
-						<div class="swiper-pagination"></div>
-					  
-						<!-- If we need navigation buttons -->
-						<div @click="prevProject" class="swiper-button-prev"></div>
-						<div  @click="nextProject" class="swiper-button-next"></div>
-					  
-						<!-- If we need scrollbar -->
-						<div class="swiper-scrollbar"></div>
-					</div>
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
 				</div>
-			</div>
-
-			<div class="examples__info">
-				<div class="examples__prop">
-					<span>Name</span>
-					<p>{{currProject.name}}</p>
+	
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
+				</div>
+	
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
+				</div>		
+				
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
+				</div>
+	
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
 				</div>
 
-				<div class="examples__prop">
-					<span>Stage</span>
-					<p>{{currProject.stage}}</p>
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
+				</div>		
+				
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
 				</div>
+	
+				<div class="latest__item">
+					<img src="static/images/villa-preview.webp" alt="">
+				</div>
+			</div>			
+		</div>
 
-				<div class="examples__prop">
-					<span>Location</span>
-					<p>{{currProject.location}}</p>
+		<div class="workwith">
+			<h2>Work with us</h2>
+			<p>We are a design studio based in Manama</p>
+			<div class="workwith__container">
+				<div class="workwith-item">
+					<h3>Design</h3>
+					<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p>
+					<a href="#">Learn more about design</a>
+				</div>
+				<div class="workwith-item">
+					<h3>Content</h3>
+					<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p>
+					<a href="#">Learn more about design</a>
+				</div>
+				<div class="workwith-item">
+					<h3>Strategy</h3>
+					<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p>
+					<a href="#">Learn more about design</a>
 				</div>
 			</div>
 		</div>
 
+		<div class="clients">
+			<h2>Our clients</h2>
+			<div class="clients__list">
+				<div class="clients-item">
+					<img src="static/images/haqbaz.jpg" alt="">
+				</div>
+				<div class="clients-item">
+					<img src="static/images/haven.jpg" alt="">
+				</div>
+				<div class="clients-item">
+					<img src="static/images/carlton.jpg" alt="">
+				</div>
+				<div class="clients-item">
+					<img src="static/images/blue.jpg" alt="">
+				</div>
+				<div class="clients-item">
+					<img src="static/images/hassan.jpg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="inspiration">
+			<h3>Design Inspiration</h3>
+			<div class="inspiration__subscribe">
+				<input type="text" placeholder="ENTER EMAIL ADDRESS...">
+				<a href="">SUBSCRIBE</a>
+			</div>
+		</div>
+		
+
+
+
+<!--
 		<div class="sections">
 			
 			<a href="">
@@ -175,7 +220,7 @@
 				</div>
 			</div>
 		</div>
-		<!--
+		
 		<div class="clients">
 			<h2>LATEST WORKS</h2>
 			
@@ -185,7 +230,7 @@
 				</div>
 			</div>
 		</div>
-		-->
+		
 	
 		<div class="team">
 			<h2>OUR TEAM</h2>
@@ -208,7 +253,7 @@
 			</div>
 		</div>
 	</main>
-
+-->
 	<footer class="footer">
 		<div class=footer__logo>
 			<img src="static/images/cubique-logo.webp" alt="">
@@ -228,55 +273,7 @@
 	</footer>
 </div>
 
-<script>
-	
-	var app = new Vue({
-		
-		el: '#app',
-		data: {
-			projects: [
-				{leftPhoto:"static/images/ss_villa_1.jpeg", rightPhoto:"static/images/ss_villa_1.jpeg", name: 'Loft Residence__1', stage: 'DD__1', location:'Bahrain'},
-				{leftPhoto:"static/images/ss_villa.jpeg", rightPhoto:"static/images/ss_villa.jpeg", name: 'Loft Residence__2', stage: 'DD__2', location:'Another City'},
-				{leftPhoto:"static/images/ss_villa.jpeg", rightPhoto:"static/images/ss_villa.jpeg", name: 'Loft Residence__3', stage: 'DD__3', location:'Another City'}
-			],
 
-			currProject: {leftPhoto:"static/images/ss_villa.jpeg", rightPhoto:"static/images/ss_villa.jpeg", name: 'Loft Residence', stage: 'DD', location:'Bahrain'},
-			counter: 0
-
-		},
-
-		methods: {
-			nextProject: function(){
-				//don't forget about this-word
-				
-
-				this.currProject = this.projects[this.counter];
-				if(this.counter<2){
-					this.counter += 1;
-				}
-				else{
-					this.counter = 0;
-				}
-			},
-
-			prevProject: function(){
-				//don't forget about this-word
-				
-				this.currProject = this.projects[this.counter];
-				if(this.counter>1){
-					this.counter -= 1;
-				}
-				else{
-					this.counter = 2;
-				}
-			}
-		}
-	})
-
-
-
-
-</script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script language = "javascript" type = "text/javascript">
 	const swiper = new Swiper('.swiper', {

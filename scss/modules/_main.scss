@@ -1,5 +1,6 @@
 
 $font-family: 'Rubik';
+$block-width: 80%;
 %flex-row{
     display: flex;
     flex-direction: row;
@@ -38,7 +39,7 @@ $font-family: 'Rubik';
         width: 20%;
     }
     nav{
-        width: 30%;
+        width: 40%;
         //min-width: 400px;
     }
     
@@ -47,6 +48,14 @@ $font-family: 'Rubik';
 @media screen and (max-width: 992px) {
     *{
         font-size: 12px;
+    }
+
+    .introduction{
+
+        &__block{
+            margin-top: 0 !important;
+            box-shadow: none !important;
+        }
     }
     
 }
@@ -72,7 +81,8 @@ $font-family: 'Rubik';
 
 .header{
     @extend %flex-row;
-    padding: 0 80px;
+    width: 80%;
+    margin: 0 auto;
     .logo{
         width: 20%;
         
@@ -88,7 +98,7 @@ $font-family: 'Rubik';
             }
 
             a:hover{
-                color: rgb(225,40,50);
+                color: black;
                 
         
             
@@ -184,65 +194,164 @@ nav{
     }
 }
 
-.main-img{
-    width: 90%;
-   
+.latest{
+
+    width: $block-width;
     margin: 0 auto;
-    padding: 0 30px;
-    //position: relative;
     margin-top: 100px;
-    @extend %flex-row;
-    
-    /*
-    img{
-        width: 100%;
-        height: 500px;
-        display: block;
-        z-index: 1;
+
+    h2{
+        font-size: 3em;
     }
 
-    .cover{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba($color: #000000, $alpha: .6);
-        width: 100%;
-        height: 100%;
-        z-index: 2;
+    &__container{
+        @extend %flex-row;
+        flex-wrap: wrap;
     }
-    */
 
-    &__logo{
-        width: 30%;
-        position: relative;
+    &__item{
+        width: 32%;
+        margin-top: 20px;
+
         img{
             display: block;
             width: 100%;
         }
     }
+}
 
-    &__about{
-        width: 65%;
+.workwith{
+    width: $block-width;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    h2{
+        font-size: 3em;
+    }
+    
+    p{
+        font-size: 1.5em;
+        color: black;
+        text-align: center;
+        font-weight: 200;
+    }
+
+    &__container{
         @extend %flex-row;
-        justify-content: flex-start;
-        align-items: flex-end;
+        margin-top: 70px;
+    }
 
-        div{
-            span{
-                font-weight: 400;
-                color: black;
-            }
-            p{
-                color: rgba(0,0,0,.8) !important;
-                font-size: 0.8em;
-                width: 80%;
-                font-weight: 300;
-            }
+    &-item{
+        width: 33%;
+
+        h3{
+            font-size: 2em;
+            color: black;
+            text-align: center;
+            font-weight: 400;
         }
+
+        p{
+            font-size: 1.2em;
+            margin-top: 20px;
+            line-height: 1.5em;
+        }
+
+        a{
+            display: block;
+            font-size: 1.2em;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            width: fit-content;
+            font-weight: 200;
+            transition: all ease-in-out 0.2s;
+            box-shadow: inset 0 -7px 0 0 #ddd;
+        }
+
+        a:hover{
+            background-color: #ddd;
+        }
+    }
+    
+}
+
+.clients{
+    width: $block-width;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    h2{
+        font-size: 3em;
+    }
+
+    &__list{
+        @extend %flex-row;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
 
     }
 
+    &-item{
+        width: fit-content;
+        margin-top: 50px;
+        //max-width: 200px;
 
+
+        img{
+            width: 100%;
+            display: block;
+            
+        }
+    }
+}
+
+.inspiration{
+    @extend %flex-row;
+    align-items: center;
+    width: $block-width;
+    margin: 0 auto;
+    margin-top: 200px;
+
+
+    h3{
+        font-size: 2em;
+        color: black;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    &__subscribe{
+        @extend %flex-row;
+        input{
+            outline: none;
+            border: 1px solid #ddd;
+            color: black;
+            height: 50px;
+            width: 320px;
+            padding: 20px;
+            font-size: 0.8em;
+        }
+
+        a{
+            @extend %flex-row;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 0.7em;
+            height: 50px;
+            width: 200px;
+            background-color: rgb(46, 111, 110);
+            margin-left: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+    }
 }
 
 .info{
@@ -373,40 +482,7 @@ h2{
 
 }
 
-.clients{
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 80px;
 
-    span{
-        font-weight: 300;
-        color: rgba(0,0,0,.4);
-        font-size: 14px;
-        margin-top: 10px;
-        display: inline-block;
-    }
-
-    &__list{
-        @extend %flex-row;
-        flex-wrap: wrap;
-        width: 90%;
-        margin: 0 auto;
-
-    }
-
-    &-item{
-        width: 20%;
-        margin-top: 30px;
-        //max-width: 200px;
-
-
-        img{
-            width: 80%;
-            display: block;
-            margin: 0 auto;
-        }
-    }
-}
 
 .team{
     width: 70%;
@@ -446,7 +522,7 @@ h2{
 
 .footer{
     @extend %flex-column;
-    margin-top: 200px;
+    margin-top: 100px;
     padding-bottom: 20px;
     &__logo{
         max-width: 200px;
