@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
+    /*
     const form = document.getElementById('form');
     form.addEventListener('submit', sendForm);
 
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', function(){
         let error = 0;
         let formReq = document.querySelectorAll('req');
     }
+    */
 });
